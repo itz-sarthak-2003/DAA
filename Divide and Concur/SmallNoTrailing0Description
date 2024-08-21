@@ -1,0 +1,27 @@
+Implement a problem of smallest number with at least n trailing zeroes in factorial. 
+Statement: Given a number n. The task is to find the smallest number whose factorial contains at least n trailing zeroes. 
+Input : n = 1                  Output : 5  
+Input : n = 6                  Output : 25
+
+To solve the problem of finding the smallest number whose factorial contains at least n trailing zeroes using a divide and conquer technique, we can approach the problem with binary search. The reason binary search is applicable is that the number of trailing zeroes in the factorial of a number increases as the number itself increases.
+
+Problem Explanation:
+Trailing zeroes in a factorial are produced by factors of 10, which are the result of multiplying 2 and 5 together.
+Since there are usually more factors of 2 than 5 in a factorial, the number of trailing zeroes is determined by the number of times 5 is a factor in the numbers from 1 to that number.
+Strategy:
+Binary Search: We'll perform a binary search on the possible values of the number. The goal is to find the smallest number whose factorial has at least n trailing zeroes.
+Count Trailing Zeroes: A helper function will count the number of trailing zeroes in the factorial of a number.
+
+Explanation:
+countTrailingZeroes Method:
+
+This method counts how many times 5 is a factor in the numbers from 1 to number.
+For example, 25! will have additional zeroes because 25 = 5 * 5.
+findSmallestNumber Method:
+
+This method uses binary search to find the smallest number whose factorial contains at least n trailing zeroes.
+The search space is between 0 and 5 * n. We choose 5 * n as an upper bound because every multiple of 5 contributes at least one trailing zero.
+The binary search adjusts the range based on the number of trailing zeroes calculated by countTrailingZeroes.
+
+timeComplexity=
+The time complexity of this approach is O(log n * log n), where the first log n comes from the binary search, and the second log n comes from the trailing zeroes counting function. This is efficient and works well for large values of n.
