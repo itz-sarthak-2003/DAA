@@ -22,3 +22,7 @@ countZeroes Method:
 
 It calls the findFirstZero method to get the index of the first 0.
 The number of zeroes is the difference between the array's length and the index of the first 0.
+
+Time Complexity=
+This approach has a time complexity of O(log n), which is much more efficient than a linear search for large arrays.
+
