@@ -1,0 +1,11 @@
+	Implement a problem of maximize Profit by trading stocks based on given rate per day. 
+Statement: Given an array arr[] of N positive integers which denotes the cost of selling and buying a stock on each of the N days. The task is to find the maximum profit that can be earned by buying a stock on or selling all previously bought stocks on a particular day. 
+Input: arr[] = {2, 3, 5}                      Output: 5  
+Input: arr[] = {8, 5, 1}                      Output: 0  
+
+
+Buy and Sell on Each Day: You can buy the stock on any day and sell it on any later day. To maximize profit, you should always buy at the lowest price seen so far and sell at the current day's price.
+Track Minimum Price: Keep track of the minimum price encountered so far.
+Calculate Profit: For each day, calculate the profit if the stock were sold on that day and update the maximum profit accordingly.
+
+Time Complexity: O(N) 
